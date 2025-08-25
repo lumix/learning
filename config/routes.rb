@@ -1,4 +1,9 @@
 FirstApp::Application.routes.draw do
+  # Random Number Generator routes
+  root 'random_number#index'
+  get 'random_number', to: 'random_number#index'
+  post 'random_number/generate', to: 'random_number#generate', as: 'random_number_generate'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
